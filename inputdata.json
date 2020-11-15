@@ -1,0 +1,44 @@
+[ {
+  "entries" : 0,
+  "index" : 0,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Monday"
+}, {
+  "entries" : 0,
+  "index" : 1,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Tuesday"
+}, {
+  "entries" : 0,
+  "index" : 2,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Wednesday"
+}, {
+  "entries" : 0,
+  "index" : 3,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Thursday"
+}, {
+  "entries" : 0,
+  "index" : 4,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Friday"
+}, {
+  "entries" : 0,
+  "index" : 5,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Saturday"
+}, {
+  "entries" : 0,
+  "index" : 6,
+  "tableData" : [[ "", "", "", "", ""]],
+  "tableHead" : [ "Dog Breed", "Food (g)", "Water (g)", "Detection range", "Time" ],
+  "title" : "Sunday"
+} ]
+
