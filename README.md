@@ -1,2 +1,2 @@
 # SmartPetMobile
-Mobile App for Seniore Design 2020 Automatic Smart Pet Bowl
+Mobile App for Senior Design 2020 Automatic Smart Pet Bowl
