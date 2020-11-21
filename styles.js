@@ -22,6 +22,11 @@ export const styles = StyleSheet.create({
       backgroundColor: '#6d7174',
 
     },
+    currImage: {
+      flex: 1,
+      width: 420,
+      height: 236,
+    },
     button: {
       backgroundColor: '#FD8F33',
       borderColor: "white",
@@ -48,7 +53,7 @@ export const styles = StyleSheet.create({
       }, 
     },
     header: {
- 
+
       flexDirection: 'row',
       justifyContent: 'space-between',
       alignItems: 'center',
@@ -57,7 +62,8 @@ export const styles = StyleSheet.create({
       marginBottom: 2,
       backgroundColor: '#F4A149',
       opacity: 1,
-      padding: 15,
+      paddingTop: 15,
+      paddingBottom: 10,
       shadowColor: "#000",
       shadowOffset: {
         width: 0,
@@ -67,11 +73,12 @@ export const styles = StyleSheet.create({
       shadowRadius: 1,
       elevation: 1.55,
       borderBottomColor: '#f77534',
-      borderBottomWidth: 4
+      borderBottomWidth: 4,
+
     },
     headerText: {
-      
-      fontSize: 25,
+      paddingLeft: 5,
+      fontSize: 23,
       textShadowColor: 'rgba(0, 0, 0, 0.75)',
       textShadowOffset: {width: -1, height: 1},
       textShadowRadius: 3,
@@ -83,17 +90,18 @@ export const styles = StyleSheet.create({
       justifyContent: 'flex-start',
     },
     Right: {
+      
       flex: 1,
       flexDirection: 'row',
       justifyContent: 'flex-end',
-      
+      paddingRight: 5,
     },
     content: {
       backgroundColor: '#f3f4ef',
 
     }, 
     btnClear: {
-
+      
       backgroundColor: '#000',
       //justifyContent: 'flex-end',
     },
@@ -102,7 +110,7 @@ export const styles = StyleSheet.create({
     },
     settingContainer: {
       flex: 1,
-      marginHorizontal: 0,
+      marginHorizontal: -5,
       backgroundColor: '#6d7174',
     },
     rowContainer: {

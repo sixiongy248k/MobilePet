@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Platform, View, StyleSheet, Text, LayoutAnimation, UIManager, TouchableOpacity} from "react-native";
+import { Platform, View, Text, LayoutAnimation, UIManager, TouchableOpacity} from "react-native";
 import SettingsList from 'react-native-settings-list';
 
 import { styles } from '../styles';
@@ -42,10 +42,10 @@ export default class Settingscreen extends React.Component {
     })
     //alert(SECTIONS);
   }
-
+  
   resetDataBase = () => {
     //resetState = require('../inputdata.json')
-    db.ref().update(resetDataJSON);
+    db.ref().set(resetDataJSON);
   }
 
   render () {
@@ -61,7 +61,7 @@ export default class Settingscreen extends React.Component {
         
        
         <SettingsList>
-          <SettingsList.Header headerText='App Config' headerStyle={{shadowRadius: 0, borderWidth: 0, borderBottomWidth: 0, padding: 10, fontSize: 20, fontWeight: "bold", color:'black', backgroundColor: '#ff8d33', margin: 0, paddingBottom: 10, paddingTop: 10}}/>
+          <SettingsList.Header headerText='App Config' headerStyle={[styles.header, styles.headerText]}/>
             <SettingsList.Item
               hasNavArrow={false}
               switchState={this.state.switchValue}
@@ -77,7 +77,7 @@ export default class Settingscreen extends React.Component {
               hasSwitch={true}
               itemBoxStyle={{backgroundColor: 'white', padding: 4, borderWidth: 0}}
               title='CLEAR DATABASE'/>
-            <SettingsList.Header headerText='About Section' headerStyle={{shadowRadius: 0, borderWidth: 0, padding: 10, fontSize: 20, fontWeight: "bold", color:'black', backgroundColor: '#ff8d33', margin: 0, paddingBottom: 10, paddingTop: 10}}/>
+            <SettingsList.Header headerText='About Section' headerStyle={[styles.header, styles.headerText]}/>
 
             <View style={styles.container}>
               <View style={styles.btnTextHolder}>

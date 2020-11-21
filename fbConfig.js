@@ -10,5 +10,7 @@ let configDB = {
 };
 
 
-let app = Firebase.initializeApp(configDB);
+export let app = Firebase.initializeApp(configDB);
 export const db = app.database();
+//export const imgREF = app.storage().ref('img1.jpg');
+//imgURL = await imgREF.getDownloadURL();

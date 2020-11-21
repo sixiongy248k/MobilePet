@@ -1,19 +1,41 @@
 import * as React from "react";
-import { Platform, StyleSheet, Text, View, ScrollView } from "react-native";
-import { Divider, Button } from 'react-native-elements';
+import { Text, View, ScrollView, Image } from "react-native";
+import { Button } from 'react-native-elements';
 import Accordion from 'react-native-collapsible/Accordion';
 import { Table, Row, Rows } from 'react-native-table-component';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
 import { styles } from '../styles';
+import { app } from '../fbConfig';
 
+
+let imgREF = app.storage().ref()
+global.newstra = 'https://banner2.cleanpng.com/20180320/rve/kisspng-computer-icons-directory-computer-file-png-transparent-no-5ab134add61177.5306856715215627978768.jpg';
+global.newimage = '';
 export default class Contentscreen extends React.Component {
 
   constructor() {
     super();
-
+    this.state = {newimageURL: newstra, activeSections: []}
     this.cleartableData = this.cleartableData.bind(this);
+
+    //if (updateFlag == true) {
+      this.getImage();
+    //}
   }
+
+  getImage() {
+    imgREF.child('img/img1.jpg').getDownloadURL().then((url) => {
+
+      newimage = url;
+      this.setState({newimageURL: newimage})
+      //alert(this.state.newimageURL)
+    }).catch((error) => {
+      //console.log(error);
+    })
+    
+  }
+
   //clear current tableData individually
   cleartableData(index) {
 
@@ -45,14 +67,9 @@ export default class Contentscreen extends React.Component {
   delete SECTIONS[index];
   };
   
-  state = {
-    activeSections: [],
-  };
-
-  //MAKE A RENDER IMAGE TO SHOW LATESTDOGFACE DETECTED WHILE MAKING TABS SMALLER MAYBE images are updated all called img1.jpg
-
-
-
+  //state = {
+  //  activeSections: [],
+  //};
   
  //implement onPress on this particular tab somehow
   _renderHeader = section => {
@@ -92,19 +109,19 @@ export default class Contentscreen extends React.Component {
   //import the image somehow and save it remotely?
   //reduce pixel and resize and create function to imageDisplay(curr_imageURL)
   //[imageDisplay(ex), 'a', 'b', 'c', 'd'],
-
-
   render() {
     return (
 
       <ScrollView style={styles.scrollView}>
-      <Accordion
-        sections={SECTIONS}
-        activeSections={this.state.activeSections}
-        renderHeader={this._renderHeader}
-        renderContent={this._renderContent}
-        onChange={this._updateSections}
-      />
+        <Text style={[styles.header, styles.headerText]}>Recent Image Capture</Text>
+        <Image key={Date.now()} source={{uri: this.state.newimageURL}} style={styles.currImage}/>
+          <Accordion
+            sections={SECTIONS}
+            activeSections={this.state.activeSections}
+            renderHeader={this._renderHeader}
+            renderContent={this._renderContent}
+            onChange={this._updateSections}
+          />
       </ScrollView>
     );
   }

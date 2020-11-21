@@ -1,12 +1,13 @@
 
 import * as React from 'react';
-import {Platform, StyleSheet, Text, View, ImageBackground, Image, LogBox} from 'react-native';
-import { Divider, Button } from 'react-native-elements';
+import {Text, View, ImageBackground} from 'react-native';
+import {Button } from 'react-native-elements';
 import Ionicon from 'react-native-vector-icons/Ionicons';
 
 
 import { styles } from '../styles';
-import { db } from '../fbConfig';
+import { app, db } from '../fbConfig';
+
 
 var randHomeImgs = [
   require('../images/dog1.jpg'),
@@ -39,19 +40,18 @@ global.newData = [];
 
 export default class HomeScreen extends React.Component  {
   
-  
-  //create a function to load database JSON entire data
+  //create a function to load database JSON entire data\
+  //and load/download/overwrite the current img1.jpg
   loadData = () => {
 
     db.ref().once('value', snapshot => {
 
       //let newdata = snapshot.val();
       newData = snapshot.val();
-
       //Just in case random indexing occurs
-      
       //alert(JSON.stringify(SECTIONS));
     });
+
   }
 
 
